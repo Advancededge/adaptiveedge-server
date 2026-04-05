@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdaptiveEdge Pro API</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 60px auto; padding: 0 20px; color: #333; }
+    h1 { color: #1a1a2e; }
+    code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+    .endpoint { margin: 8px 0; }
+    .method { font-weight: bold; color: #0066cc; }
+  </style>
+</head>
+<body>
+  <h1>AdaptiveEdge Pro API</h1>
+  <p>Backend server for AdaptiveEdge Pro trading platform. All endpoints are serverless functions.</p>
+
+  <h2>Endpoints</h2>
+
+  <h3>Health</h3>
+  <div class="endpoint"><span class="method">GET</span> <code>/health</code></div>
+
+  <h3>Authentication</h3>
+  <div class="endpoint"><span class="method">POST</span> <code>/auth/register</code></div>
+  <div class="endpoint"><span class="method">POST</span> <code>/auth/login</code></div>
+  <div class="endpoint"><span class="method">PATCH</span> <code>/auth/telegram</code></div>
+
+  <h3>Accounts</h3>
+  <div class="endpoint"><span class="method">GET</span> <code>/accounts</code></div>
+  <div class="endpoint"><span class="method">GET</span> <code>/accounts/:id</code></div>
+  <div class="endpoint"><span class="method">PATCH</span> <code>/accounts/:id/settings</code></div>
+  <div class="endpoint"><span class="method">PATCH</span> <code>/accounts/:id/override</code></div>
+
+  <h3>MT4 Bridge</h3>
+  <div class="endpoint"><span class="method">POST</span> <code>/mt4/heartbeat</code></div>
+  <div class="endpoint"><span class="method">POST</span> <code>/mt4/trade/open</code></div>
+  <div class="endpoint"><span class="method">POST</span> <code>/mt4/trade/close</code></div>
+  <div class="endpoint"><span class="method">POST</span> <code>/mt4/alert</code></div>
+
+  <h3>Trades</h3>
+  <div class="endpoint"><span class="method">GET</span> <code>/trades/:accountId</code></div>
+
+  <h3>Admin</h3>
+  <div class="endpoint"><span class="method">GET</span> <code>/admin/stats</code></div>
+</body>
+</html>
