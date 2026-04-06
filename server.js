@@ -5,14 +5,15 @@
 //   Supports: Multi-client, REST API, Telegram notifications
 // ============================================================
 
-const express    = require("express");
-const mongoose   = require("mongoose");
-const bcrypt     = require("bcryptjs");
-const jwt        = require("jsonwebtoken");
-const TelegramBot = require("node-telegram-bot-api");
-const cors       = require("cors");
-const helmet     = require("helmet");
-require("dotenv").config();
+import express    from "express";
+import mongoose   from "mongoose";
+import bcrypt     from "bcryptjs";
+import jwt        from "jsonwebtoken";
+import TelegramBot from "node-telegram-bot-api";
+import cors       from "cors";
+import helmet     from "helmet";
+import dotenv     from "dotenv";
+dotenv.config();
 
 const app = express();
 app.use(express.json());
